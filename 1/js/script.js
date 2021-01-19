@@ -2,11 +2,11 @@
 // se è dispari stampa il numero successivo.
 
 
-// let numeroUtente = parseInt(prompt('inserisci un numero'));
+let numeroUtente = parseInt(prompt('inserisci un numero'));
 
-// if (numeroUtente%2 == 0){
-//     console.log(numeroUtente);
-// } else {
-//     console.log(numeroUtente + 1);
-// }
+if (numeroUtente%2 == 0){
+    console.log(numeroUtente);
+} else {
+    console.log(numeroUtente + 1);
+}
 
