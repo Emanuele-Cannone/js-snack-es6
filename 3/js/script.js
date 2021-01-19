@@ -7,9 +7,9 @@ const primaParola = prompt('inserisci una parola');
 const secondaParola = prompt('inserisci una parola');
 
 
-if (primaParola > secondaParola){
+if (primaParola.length > secondaParola.length){
     console.log(primaParola);
-} else if (primaParola < secondaParola){
+} else if (secondaParola.length > primaParola.length){
     console.log(secondaParola);
 } else {
     console.log(primaParola, secondaParola);
