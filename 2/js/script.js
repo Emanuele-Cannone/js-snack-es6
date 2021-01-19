@@ -5,14 +5,34 @@
 const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
+// for (let i = 0; i < numeri.length; i++){
+//     if(numeri[i]%2 == 0){
+//         document.getElementById('verde').innerHTML += ` 
+//             ${numeri[i]} 
+//         `;// e' necessario aggiungere il += perchè senno' vai a sovrascrivere il risultato invece che aggiungerlo
+//     } else {
+//         document.getElementById('rosso').innerHTML += `
+//             ${numeri[i]}
+//         `;
+//     }
+// };
+
 for (let i = 0; i < numeri.length; i++){
     if(numeri[i]%2 == 0){
-        document.getElementById('verde').innerHTML += ` 
-            ${numeri[i]} 
+        document.getElementById('pari').innerHTML +=
+        `
+            <div id="verde">
+                ${numeri[i]}
+            </div>
+
         `;// e' necessario aggiungere il += perchè senno' vai a sovrascrivere il risultato invece che aggiungerlo
     } else {
-        document.getElementById('rosso').innerHTML += `
-            ${numeri[i]}
+        document.getElementById('dispari').innerHTML += `
+        
+            <div id="rosso">
+                ${numeri[i]}
+            </div>
+
         `;
     }
 };
