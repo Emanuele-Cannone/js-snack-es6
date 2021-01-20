@@ -66,4 +66,12 @@ bici.forEach((element, index) => {
 
 });
 
-console.log(pesoPiccolo, nomePiccolo);// stampa le due variabili
+// console.log(pesoPiccolo, nomePiccolo);// stampa le due variabili
+
+
+console.log(
+    `
+    il nome della bici più leggera è ${nomePiccolo}
+    il peso della bici più leggera è ${pesoPiccolo}
+    `
+);
