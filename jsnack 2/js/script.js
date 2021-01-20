@@ -5,16 +5,20 @@
 // const myArray = ['Pippo', 'Pluto', 'Paperino', 'Paperone', 'Paperina', 'Paperoga'];
 // Se l’utente inserisce 2 numeri: 1, 4 allora selezioniamo 'Pluto', 'Paperino', 'Paperone', 'Paperina'
 
-
-
 const myArray = ['Pippo', 'Pluto', 'Paperino', 'Paperone', 'Paperina', 'Paperoga'];
+const nuovoArray = [];
 
-const arrayScelto = [];
+const primoNumero = parseInt(prompt('inserisci un numero'))
+const secondoNumero = parseInt(prompt('inserisci un numero'))
 
-let numeroUtenteDa = parseInt(prompt('inserisci un numero'));
-let numeroUtenteA = parseInt(prompt('inserisci un numero'));
 
-const arrayScelto = myArray.filter((element, index) => {
-    return element == index(numeroUtenteDa)
-});
-console.log(arrayScelto);
+
+myArray.forEach((element, index) => {
+    
+    if (index >= primoNumero && index <= secondoNumero){
+        nuovoArray.push(element);
+    };
+
+ });
+
+ console.log(nuovoArray);
