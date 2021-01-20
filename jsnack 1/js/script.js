@@ -28,19 +28,42 @@ const bici = [
 
 let pesoPiccolo = 99;
 
-// per ogni oggetto interno all'array
-for (let i = 0; i < bici.length; i++){
-    // prendi le proprietà peso e nome di ogni oggetto
-    const {peso, nome} = bici[i];
-    
-    // confronta il valore peso con il valore di pesoPiccolo
-    if (peso < pesoPiccolo){
-        // se il peso è minore di pesoPiccolo allora salvalo in pesoPiccolo
-        pesoPiccolo = peso;
-        // e salva il valore nome di quell'oggetto in nomePiccolo
-        nomePiccolo = nome;
-    }
-};
 
-// restituisci il nome ed il peso della bici piu leggera, cioè quella con index di riga 42
-console.log(nomePiccolo, pesoPiccolo);
+// utilizzando il ciclo for
+
+
+// per ogni oggetto interno all'array
+// for (let i = 0; i < bici.length; i++){
+//     // prendi le proprietà peso e nome di ogni oggetto
+//     const {peso, nome} = bici[i];
+//     console.log(nome, peso);// in questo modo sto creando diversi const con i valori di ogni ogetto
+    
+//     // confronta il valore peso con il valore di pesoPiccolo
+//     if (peso < pesoPiccolo){
+//         // se il peso è minore di pesoPiccolo allora salvalo in pesoPiccolo
+//         pesoPiccolo = peso;
+//         // e salva il valore nome di quell'oggetto in nomePiccolo
+//         nomePiccolo = nome;
+//     }
+// };
+
+// // restituisci il nome ed il peso della bici piu leggera, cioè quella con index di riga 42
+// console.log(nomePiccolo, pesoPiccolo);
+
+// utilizzando il forEach
+
+bici.forEach((element, index) => {
+
+    const { peso, nome } = bici[index];// prendi gli elementi peso e nome di bici con index crescente
+    console.log(nome, peso);// vedi se funziona
+
+
+    if (peso < pesoPiccolo){ // se il peso(con idex sempre crescente) è minore di pesoPiccolo
+        pesoPiccolo = peso; // quel peso viene sovrascritto in pesoPiccolo
+        nomePiccolo = nome; // quel nome viene salvato in nomePiccolo
+    };
+
+
+});
+
+console.log(pesoPiccolo, nomePiccolo);// stampa le due variabili

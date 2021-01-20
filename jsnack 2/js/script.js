@@ -9,3 +9,12 @@
 
 const myArray = ['Pippo', 'Pluto', 'Paperino', 'Paperone', 'Paperina', 'Paperoga'];
 
+const arrayScelto = [];
+
+let numeroUtenteDa = parseInt(prompt('inserisci un numero'));
+let numeroUtenteA = parseInt(prompt('inserisci un numero'));
+
+const arrayScelto = myArray.filter((element, index) => {
+    return element == index(numeroUtenteDa)
+});
+console.log(arrayScelto);
