@@ -27,6 +27,22 @@ const bici = [
 ];
 
 
-const [{ nome, peso }, { nome, peso }] = bici;
-console.log(peso);
-console.log(nome);
+// const [{ nome, peso }] = bici; // in questo modo prendo i valori 'nome' e 'peso' del primo oggetto dell'array
+// console.log(peso);// stampo il peso
+// console.log(nome);// stampo il nome
+
+let pesoPiccolo = 0;
+let i = 0;
+// prendi i pesi di ogni bici
+for (i = 0; i < bici.length; i++){
+    console.log(bici[i].peso);
+    
+    // confronta i pesi
+    if (bici[0].peso > bici[i].peso){
+        pesoPiccolo = bici[i].peso;
+        nomePiccolo = bici[i].nome;
+    }
+};
+
+// restituisci il nome ed il peso della bici piu leggera, cioè quella con index di riga 42
+console.log(nomePiccolo, pesoPiccolo);
