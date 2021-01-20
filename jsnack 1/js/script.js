@@ -26,21 +26,19 @@ const bici = [
     }
 ];
 
+let pesoPiccolo = 99;
 
-// const [{ nome, peso }] = bici; // in questo modo prendo i valori 'nome' e 'peso' del primo oggetto dell'array
-// console.log(peso);// stampo il peso
-// console.log(nome);// stampo il nome
-
-let pesoPiccolo = 0;
-let i = 0;
-// prendi i pesi di ogni bici
-for (i = 0; i < bici.length; i++){
-    console.log(bici[i].peso);
+// per ogni oggetto interno all'array
+for (let i = 0; i < bici.length; i++){
+    // prendi le proprietà peso e nome di ogni oggetto
+    const {peso, nome} = bici[i];
     
-    // confronta i pesi
-    if (bici[0].peso > bici[i].peso){
-        pesoPiccolo = bici[i].peso;
-        nomePiccolo = bici[i].nome;
+    // confronta il valore peso con il valore di pesoPiccolo
+    if (peso < pesoPiccolo){
+        // se il peso è minore di pesoPiccolo allora salvalo in pesoPiccolo
+        pesoPiccolo = peso;
+        // e salva il valore nome di quell'oggetto in nomePiccolo
+        nomePiccolo = nome;
     }
 };
 
